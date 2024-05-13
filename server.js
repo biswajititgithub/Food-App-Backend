@@ -37,11 +37,6 @@ app.use("/api/cart",cartRouter)
 app.use("/api/order",orderRouter)
 
 
-app.get("/", (req, res) => { 
-    app.use(express.static(path.resolve(__dirname, "frontend", "build"))); 
-    res.sendFile(path.resolve(__dirname, "frontend", "dist","index.html")); 
-  }); 
-
 app.get("/", (req,res)=>{
     res.send("API Working")
 })
